@@ -1,0 +1,28 @@
+.TrendCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--cardColor);
+    padding: 1rem;
+    border-radius: 1rem;
+    padding-left: 2rem;
+}
+
+.TrendCard>h3 {
+    font-size: 1.333rem;
+    margin: 0.7rem 0 0 0;
+    font-weight: bold;
+}
+
+.trend {
+    display: flex;
+    flex-direction: column;
+}
+
+.trend>span:nth-child(1) {
+    font-weight: bold;
+}
+
+.trend>span:nth-child(2) {
+    font-size: 0.95rem;
+}

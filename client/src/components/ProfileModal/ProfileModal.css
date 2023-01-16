@@ -1,0 +1,13 @@
+.infoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.infoForm>h3 {
+    margin: 0;
+}
+
+.buttonGroup {
+    align-self: flex-end;
+}

@@ -1,0 +1,8 @@
+.ProfileBar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    overflow: auto;
+}
+

@@ -1,0 +1,90 @@
+.Auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+    position: relative;
+}
+
+.authLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.authLeft>img {
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+}
+
+.presentation__title {
+    font-size: 3rem;
+    background-color: red;
+    background-image: var(--buttonBg);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    margin: 0;
+}
+
+.authRight {
+    background-color: var(--cardColor);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.3rem;
+    align-items: center;
+    min-width: 22rem;
+}
+
+.AuthForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 95%;
+}
+
+.AuthForm>h3 {
+    margin: 1rem auto;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.inputGroup>input {
+    outline: none;
+    border: none;
+    background-color: var(--inputColor);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.infoButton {
+    padding: 0.5rem 1rem;
+}
+
+.Alert {
+    position: absolute;
+    top: 5rem;
+}
+
+@media screen and (max-width: 880px) {
+    .authLeft {
+        display: none;
+    }
+}
