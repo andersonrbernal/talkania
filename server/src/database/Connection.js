@@ -8,7 +8,8 @@ class Connection {
     static connect(app) {
         try {
             mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-            app.listen(process.env.PORT)
+            console.log(process.env.DB_URI, process.env.PORT, process.env.JWT_SECRET)
+            app.listen(3000)
         } catch (error) {
             console.log(error.message)
         }

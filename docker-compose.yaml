@@ -1,29 +1,38 @@
-version: '1.0.0'
+version: '3'
 services:
-  mongodb:
-    image: "mongo"
-    volumes:
-      - data:/data/db
-  server:
-    build: ./server
-    ports:
-      - "3000:3000"
-    volumes:
-      - logs:/app/logs
-      - ./server:/app
-      - /app/node_modules
-    depends_on:
-      - mongodb
   client:
-    build: ./client
+    image: client
+    stdin_open: true
     ports:
       - "5173:5173"
-    volumes:
-      - ./client/src:/app/src
-    stdin_open: true
-    tty: true
+    environment:
+      - VITE_PUBLIC_FOLDER=http://localhost:3000/images/
+    networks:
+      - mern-app
+  server:
+    image: server
+    ports:
+      - "3000:3000"
+    restart: always
     depends_on:
-      - server
+      - mongo
+    environment:
+      - DB_URI=mongodb://mongo:27017/SocialMedia
+      - PORT=3000
+      - JWT_SECRET=1KL31f64xwlSV1616Ailv8SgTLSCMDx06vCXKzzXJtTJQmaLj5
+    networks:
+      - mern-app
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-app
+    volumes:
+      - mongo-data:/data/db
+networks:
+  mern-app:
+    driver: bridge
 volumes:
-  data:
-  logs:
+  mongo-data:
+    driver: local
