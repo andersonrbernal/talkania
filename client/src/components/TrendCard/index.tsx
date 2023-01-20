@@ -1,4 +1,3 @@
-import TrendType from '../../data/TrendData';
 import './TrendCard.css'
 
 const TrendCard: React.FC<TrendType[]> = (data) => {
