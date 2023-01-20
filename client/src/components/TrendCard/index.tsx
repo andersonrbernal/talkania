@@ -1,6 +1,11 @@
 import './TrendCard.css'
 
-const TrendCard: React.FC<TrendType[]> = (data) => {
+interface Trend {
+    name: string;
+    shares: number;
+}
+
+const TrendCard: React.FC<Trend[]> = (data) => {
     data = Object.values(data)
     return (
         <div className="TrendCard">
