@@ -31,7 +31,7 @@ const User = (person: UserType) => {
                 <img src={
                     person.profilePicture
                         ? serverPublicFolder + person.profilePicture
-                        : serverPublicFolder + '/defaultProfile.png'
+                        : serverPublicFolder + 'defaultProfile.png'
                 } alt="profile picture" className='followerImage' style={{ objectFit: 'cover' }} />
                 <div className="name">
                     <span>{capitalize(person.firstName)}</span>

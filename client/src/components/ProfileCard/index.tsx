@@ -24,13 +24,13 @@ const ProfileCard = () => {
             <div className="ProfileImages">
                 <img src={
                     user.coverPicture
-                        ? serverPublicFolder + `/${user.coverPicture}`
-                        : serverPublicFolder + '/defaultCover.jpg'
+                        ? serverPublicFolder + `${user.coverPicture}`
+                        : serverPublicFolder + 'defaultCover.jpg'
                 } alt="cover picture" style={{ maxHeight: ProfilePage ? '20rem' : '9rem', objectFit: 'cover' }} />
                 <img src={
                     user.profilePicture
-                        ? serverPublicFolder + `/${user.profilePicture}`
-                        : serverPublicFolder + '/defaultProfile.png'
+                        ? serverPublicFolder + `${user.profilePicture}`
+                        : serverPublicFolder + 'defaultProfile.png'
                 } alt="profile picture" style={{ objectFit: 'cover' }} />
             </div>
 

@@ -77,8 +77,8 @@ const PostShare = () => {
         <div className="PostShare">
             <img src={
                 user.profilePicture
-                    ? serverPublicFolder + `/${user.profilePicture}`
-                    : serverPublicFolder + '/defaultProfile.png'
+                    ? serverPublicFolder + `${user.profilePicture}`
+                    : serverPublicFolder + 'defaultProfile.png'
             } alt="profile image" style={{ maxHeight: '20rem', objectFit: 'cover' }} />
             <form>
                 <input type="text" ref={description} required placeholder="What's happening?" />
